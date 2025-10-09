@@ -13,7 +13,9 @@ public class HelloWorldSwing {
 
         //Add the ubiquitous "Hello World" label.
         JLabel label = new JLabel("Hello World");
+        JButton button = new JButton("Press me");
         frame.getContentPane().add(label);
+        frame.getContentPane().add(button);
 
         //Display the window.
         frame.pack();
