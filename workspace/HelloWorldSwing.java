@@ -9,7 +9,7 @@ public class HelloWorldSwing {
      */
     private static void createAndShowGUI() {
         //Create and set up the window.
-        ImageIcon
+        //ImageIcon
         JFrame frame = new JFrame(/* A NAME GOES HERE (OPTIONAL)*/ "Swing Excersises");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   //When we hit the X on the top right to close the application, it will actually close
         frame.setSize(240,240);
@@ -18,11 +18,13 @@ public class HelloWorldSwing {
         //Add the ubiquitous "Hello World" label.
         JLabel label = new JLabel("Hello World");
         label.setText("Goodbye World!");
+        //label.setHorizontalAlignment(40);
+        //label.setHorizontalTextPosition();
 
         frame.getContentPane().add(label);
 
         //Display the window.
-        frame.pack();
+        //frame.pack();
         frame.setVisible(true);
     }
 
