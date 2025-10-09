@@ -1,4 +1,5 @@
 import javax.swing.*;        
+import java.awt.Color;
 
 public class HelloWorldSwing {
     /**
@@ -8,19 +9,20 @@ public class HelloWorldSwing {
      */
     private static void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("HelloWorldSwing");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ImageIcon
+        JFrame frame = new JFrame(/* A NAME GOES HERE (OPTIONAL)*/ "Swing Excersises");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   //When we hit the X on the top right to close the application, it will actually close
         frame.setSize(240,240);
+        frame.getContentPane().setBackground(new Color(171, 169, 161));
 
         //Add the ubiquitous "Hello World" label.
         JLabel label = new JLabel("Hello World");
-        JButton button = new JButton("Press me");
-        //JButton.setSize(10,10);
+        label.setText("Goodbye World!");
+
         frame.getContentPane().add(label);
-        frame.getContentPane().add(button);
 
         //Display the window.
-        //frame.pack();
+        frame.pack();
         frame.setVisible(true);
     }
 
