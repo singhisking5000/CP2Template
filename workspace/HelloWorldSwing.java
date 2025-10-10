@@ -1,7 +1,13 @@
-import javax.swing.*;        
-import java.awt.Color;
+import javax.swing.*;
+import javax.swing.border.Border;
 
-public class HelloWorldSwing {
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class HelloWorldSwing implements ActionListener {
     /**
      * Create the GUI and show it.  For thread safety,
      * this method should be invoked from the
@@ -10,21 +16,31 @@ public class HelloWorldSwing {
     private static void createAndShowGUI() {
         //Create and set up the window.
         //ImageIcon
+        Border border = BorderFactory.createLineBorder(Color.red);
         JFrame frame = new JFrame(/* A NAME GOES HERE (OPTIONAL)*/ "Swing Excersises");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   //When we hit the X on the top right to close the application, it will actually close
-        frame.setSize(240,240);
+        frame.setSize(240,80);
         frame.getContentPane().setBackground(new Color(171, 169, 161));
 
         //Add the ubiquitous "Hello World" label.
-        JLabel label = new JLabel("Hello World");
-        label.setText("Goodbye World!");
+        JLabel label = new JLabel("HNANANONO");
+        label.setBorder(border);
+        label.setText("Hello World!");
         //label.setHorizontalAlignment(40);
         //label.setHorizontalTextPosition();
+        JButton button = new JButton("Press me!");
+        button.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+                throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+            }
+            
+        });
+        frame.add(button);
 
+        frame.setLayout(new FlowLayout());
         frame.getContentPane().add(label);
-
-        //Display the window.
-        //frame.pack();
         frame.setVisible(true);
     }
 
@@ -37,4 +53,6 @@ public class HelloWorldSwing {
             }
         });
     }
+
+   
 }
